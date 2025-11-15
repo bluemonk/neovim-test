@@ -13,10 +13,6 @@
       pkgs = import nixpkgs { inherit system; };
 
       neovim = pkgs.wrapNeovimUnstable pkgs.neovim-unwrapped {
-        autowrapRuntimeDeps = true;
-        viAlias = true;
-        vimAlias = true;
-
         luaRcContent = ''
           -- This is the first line of this test
         '';
